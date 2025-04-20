@@ -20,9 +20,13 @@ const AnimatedText = ({
 }: AnimatedTextProps) => {
   
   // Split text into letters or words
-  const items = type === 'letter' 
-    ? Array.from(text)
-    : text.split(' ').map(word => word + ' ');
+  const items = type === 'letter'
+  ? Array.from(text)
+  : text.split(' ').flatMap((word, i, arr) =>
+      i < arr.length - 1
+        ? [word, '\u00A0']
+        : [word]
+    );
 
   // Animation variants for container and items
   const containerVariants = {

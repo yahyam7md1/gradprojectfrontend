@@ -56,7 +56,7 @@ function App() { //Returns the structure of the page
           React.createElement(
             AnimatedButton,
             {
-              className: "flex items-center",
+              className: "flex items-center font-semibold",
               color: "#4A1762",
               hoverColor: "#6B2A8A"
             },
@@ -75,11 +75,11 @@ function App() { //Returns the structure of the page
           </div>
         )}
       
-          <InfoSections className="mb-16" />
+          <InfoSections id="features" className="mb-16" />
         
       </main>
       
-      <Footer className="mt-16" />
+      <Footer id="contacts" className="mt-16" />
     </div>
   );
 }

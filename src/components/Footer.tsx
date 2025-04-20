@@ -3,9 +3,10 @@ import AnimatedText from './ReactBits/AnimatedText';
 
 interface FooterProps {
   className?: string;
+  id?: string;
 }
 
-const Footer: React.FC<FooterProps> = ({ className }) => {
+const Footer: React.FC<FooterProps> = ({ id, className }) => {
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -34,13 +35,14 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
 
   return (
     <motion.footer 
+      id={id}
       className={`bg-[#360B4A] text-white py-12 ${className}`}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <div className="container mx-auto px-4 pl-24">
+      <div className="container mx-auto px-4 pl-24  ">
         <motion.div 
           className="grid grid-cols-4 gap-8 mb-8"
           variants={containerVariants}
@@ -168,7 +170,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.8 }}
         >
-          <p class="pr-20">COPYRIGHT 2025 TASKIFY</p>
+          <p class="pr-20">COPYRIGHT © 2025 TASKIFY</p>
         </motion.div>
       </div>
     </motion.footer>
