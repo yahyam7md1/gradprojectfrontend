@@ -3,9 +3,13 @@ import AnimatedSection from './ReactBits/AnimatedSection';
 import AnimatedText from './ReactBits/AnimatedText';
 import React from 'react';
 
-const InfoSections = () => {
+interface InfoSectionsProps {
+  className?: string;
+}
+
+const InfoSections: React.FC<InfoSectionsProps> = ({ className }) => {
   return (
-    <>
+    <div className={className}>
       {/* Help section with left-rounded shape */}
       {React.createElement(
         AnimatedSection,
@@ -89,7 +93,7 @@ const InfoSections = () => {
           </motion.div>
         </motion.div>
       )}
-    </>
+    </div>
   );
 };
 

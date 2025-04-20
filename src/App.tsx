@@ -68,17 +68,18 @@ function App() { //Returns the structure of the page
           AnimatedSection,
           {
             delay: 0.7,
-            className: "mb-16"
+            className: "mb-36"
           },
           <div className="bg-gray-100 h-64 flex items-center justify-center"> 
             <p className="text-gray-800">app animation goes here</p>
           </div>
         )}
+      
+          <InfoSections className="mb-16" />
         
-        <InfoSections />
       </main>
       
-      <Footer />
+      <Footer className="mt-16" />
     </div>
   );
 }
